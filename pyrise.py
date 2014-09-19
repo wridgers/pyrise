@@ -256,7 +256,7 @@ class HighriseObject(object):
         
         # if the id should be included and it is not None, add it first
         if include_id and 'id' in self.__dict__ and self.id != None:
-            id_element = ElementTree.SubElement(xml, tag='id', attrib={'type': 'integer'})
+            id_element = ElementTree.SubElement(xml, 'id', attrib={'type': 'integer'})
             try:
                 id_element.text = unicode(self.id)
             except:
